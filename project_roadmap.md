@@ -1,11 +1,8 @@
-# Project Roadmap: Go Game (Scoring, Prisoners & Bot)
-
-This document outlines the remaining development tasks for implementing Western-style scoring, prisoner tracking, and a point-ranking Minimax bot.
+# Project Roadmap: Go Game
 
 ---
 
 ## Part 1: Prisoners and Scoring (Western Method)
-*Since automated dead stone detection is excluded, players will resolve the board by playing out remaining disputes or ending early.*
 
 - [x] **Task 1: Liberty Detection Algorithm (BFS / Flood-Fill)**
   - [x] Write a function to find all connected stones of the same color (a "group").
@@ -35,7 +32,6 @@ This document outlines the remaining development tasks for implementing Western-
 ---
 
 ## Part 2: Building the Go Bot (Minimax AI)
-*Your architecture uses a Game-Tree Search (Minimax) with a point-based heuristic evaluation function where depth dictates strength.*
 
 - [ ] **Task A: Board Deep-Copying**
   - [ ] Write a method to create a fully independent clone of the board and game state so the bot can simulate future moves without altering the live game.
