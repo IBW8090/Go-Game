@@ -5,7 +5,7 @@
 ## Part 1: Prisoners and Scoring (Western Method)
 
 - [x] **Task 1: Liberty Detection Algorithm (BFS / Flood-Fill)**
-  - [x] Write a function to find all connected stones of the same color (a "group").
+  - [x] Write a function to find all connected stones of the same colour (a "group").
   - [x] Traverse adjacent spaces to count all unique empty `+` liberties for that group.
 - [x] **Task 2: Capture Logic & Prisoner Counters**
   - [x] Add `self.black_prisoners` and `self.white_prisoners` to the `game` class `__init__`.
@@ -20,6 +20,8 @@
   - [x] Track consecutive passes using a counter. If both players pass consecutively (2 passes in a row), end the main loop and trigger scoring.
 - [ ] **Task 5: Territory Flood-Fill**
   - [ ] Scan all remaining empty `+` spaces on the board at game-end.
+    - Goal to do this by selecting first empty space then flood filling until the test chars would be captured. When they are declared captured, check which colours are bordering the test chars. 
+      - If both colours are bordering test chars, then it is neutral, black only is black territory and white only is white territory.
   - [ ] Group connected empty spaces into distinct territory regions.
   - [ ] Check the border of each region:
     - Bordered only by Black $\rightarrow$ Black territory.
@@ -41,6 +43,6 @@
   - [ ] Write a function that takes a simulated board state, estimates the current point differential (stones + approximate territory + prisoners), and returns a single numerical score (positive for Black advantage, negative for White advantage).
 - [ ] **Task D: Minimax / Lookahead Algorithm**
   - [ ] Write a recursive function taking a target `depth`.
-  - [ ] Loop through legal moves, apply them to a copied board, evaluate the outcome, and choose the move that optimizes the bot's score while anticipating the opponent's counter-moves.
+  - [ ] Loop through legal moves, apply them to a copied board, evaluate the outcome, and choose the move that optimises the bot's score while anticipating the opponent's counter-moves.
 - [ ] **Task E: Bot Integration**
   - [ ] In the main game loop, replace `makeMove()` with your bot's decision function (`bot.findBestMove(gameTest, depth=...)`) when it is the computer's turn to play.
